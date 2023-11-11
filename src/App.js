@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+// eslint-disable-next-line
+import { NavbarComponent } from './components/Nav_Component';
+import SingleCard from './components/Card';
+// eslint-disable-next-line
+import Logo from './Images/Logo.webp';
+// eslint-disable-next-line
+import Palace from './Images/House.webp';
+// eslint-disable-next-line
+import Polygon from './Images/Landscape.webp';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { Sample } from './components/Bottom'
+export default function App(){
+    return(
+        <div>
+            < NavbarComponent />
+            <h1 class='title'>Card</h1>
+            <div className="card-container">
+                < SingleCard image={Logo} />
 
-export default App;
+                < SingleCard image={Palace} />
+
+                < SingleCard image={Polygon} />
+
+            </div>
+            <Sample/>
+        </div>
+    );
+};
